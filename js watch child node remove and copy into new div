@@ -1,0 +1,11 @@
+destination = document.getElementById( 'd' );
+document.getElementById( 'ddd' ).addEventListener( 'DOMNodeRemoved', function ( event ) { 
+      if( event.target.parentNode.id === 'ddd' ) {
+          var id = event.srcElement.id;
+          var n = event.srcElement.outerHTML;
+		  console.log(event); 
+		  var wrapper = document.createElement('div');
+	wrapper.innerHTML = n;
+		destination.appendChild(wrapper);
+   };
+}, false );
